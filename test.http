@@ -1,0 +1,26 @@
+### Test du login admin
+POST http://localhost:3001/login
+Content-Type: application/json
+
+{
+  "username": "admin",
+  "password": "secret123"
+}
+
+### Test avec mot de passe incorrect
+POST http://localhost:3001/login
+Content-Type: application/json
+
+{
+  "username": "admin",
+  "password": "wrongpassword"
+}
+
+### Test avec champ manquant
+POST http://localhost:3001/login
+Content-Type: application/json
+
+{
+  "username": "",
+  "password": ""
+}
